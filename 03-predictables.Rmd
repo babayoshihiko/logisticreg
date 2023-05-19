@@ -1,0 +1,6 @@
+# 説明変数  {#predictables}
+
+ロジスティック回帰においては、式の右辺側にある変数を、共変量 (covariate)、説明変数 (predictable variable)、独立変数 (independent variable) などと言います。
+
+それぞれ、少しづつ意味が違うのですが、その違いは分かりづらいです。
+

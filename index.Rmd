@@ -1,0 +1,60 @@
+--- 
+title: "R によるロジスティック回帰"
+author: "馬場美彦"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  本書は、医療介護福祉関係者を対象とした、ロジスティック回帰の解説書です。
+  おもな題材としては、フレイルの研究論文としています。
+  Clubhouse や介護の勉強会で集まった人たちと作り上げました。
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+```{r index-setup, include = FALSE}
+options(kableExtra.latex.load_packages = FALSE)
+library(kableExtra)
+library(tidyverse)
+library(epiDisplay)
+```
+
+# はじめに  {- #preface}
+
+ロジスティック回帰は、19世紀には発明されていましたが、医学の世界では 1948年に始まった Framingham Heart Study で採用され、広く使われるようになりました。。
+
+## フレイル  {- #frailty}
+
+本書で用いる例は、すべてフレイル (frailty)\index{ふれいる@フレイル} の論文です。
+
+フレイルとは、病気ではないけれど、年齢とともに、筋力や心身の活力が低下し、介護が必要になりやすい、健康と要介護の間の虚弱な状態のことです。
+
+## 章の構成  {- #contents}
+
+第１章では、前提となる知識を確認します。まず、統計学のなかでのロジスティック回帰を解説します。ロジスティック回帰は、オッズ比を多変量に拡張したものです。
+
+第２章では、ロジスティック回帰分析の流れを、実際の論文を参照しながら追っていきます。ここでは、応答変数と説明変数について簡単に学びます。
+
+続く第３章では、説明変数についてさらに深く学びます。説明変数をどのように決定するのか、いくつかの方法を実際の論文から学びます。図化として、メタ分析にも用いられるフォレストプロットも学びます。
+ - 単変量と多変量
+ - ステップワイズ
+ - 多重共線性
+
+第４章では、ロジスティック回帰における交互作用について解説します。交互作用はランダム化比較試験では重要な概念ですが、ロジスティック回帰ではあまり使われていないかもしれません。
+
+これまで、応答変数は「生と死」や「疾患の有無」などすべて２値変数でした。第５章では、応答変数を３値以上に拡張する多項ロジスティックを説明します。
+
+第３章では、説明変数間は基本的に独立した関係が望ましいことを説明しました。第６章ではその原則から少し外れて、階層構造を表す説明変数を持つマルチレベル解析について触れます。
+
+これまで、ロジスティック回帰は正しい前提で話してきましたが、予測はどの程度正しいのでしょうか？第７章では、感度-特異度から ROC 曲線を作図する方法を説明します。
+
+傾向スコア 08-propensity
+
+欠損値の扱い 09-missing
+
+サンプルサイズ 10-samplesize
+
+機械学習 11-machinelearning
+
+## 著者について  {- #authors}

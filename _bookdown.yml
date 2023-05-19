@@ -1,0 +1,19 @@
+book_filename: "Logistic_Regression"
+delete_merged_file: true
+rmd_files:
+    - "index.Rmd"
+    - "01-intro.Rmd"
+    - "02-overview.Rmd"
+    - "03-predictables.Rmd"
+    - "04-interaction.Rmd"
+    - "05-multinomial.Rmd"
+    - "06-multilevel.Rmd"
+    - "07-roc.Rmd"
+    - "08-propensityscore.Rmd"
+    - "09-missing.Rmd"
+    - "10-samplesize.Rmd"
+    - "11-machinelearning.Rmd"
+    - "99-references.Rmd"
+language:
+  ui:
+    chapter_name: "Chapter "

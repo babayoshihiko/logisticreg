@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+_book
+_latex
+Logistic_Regression.Rmd
+Logistic_Regression.knit.md
+Logistic_Regression.log
+jauthoryear.bbx
+jauthoryear.cbx
