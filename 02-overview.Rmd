@@ -21,7 +21,7 @@
 
 * 多くの説明変数を用意し、説明変数の間に相関関係があるものは、どれかひとつだけ選びます (多重共線性)。
 * 単変量解析 (univariate logistic regression) を行う。単変量解析は、2x2の表からオッズ比を求めることとほぼ同じですが、少し異なります。
-* 説明変数のうち、そう感がありそうなものだけ残します (通常、 p > 0.1)。
+* 説明変数のうち、目的変数と相関関係がありそうなものだけ残します (通常、 p > 0.1)。
 * 多重ロジスティック回帰を行い、調整済みオッズ比を求めます。
 
 この方法は、まず多くの説明変数を用意し、数を減らしていくので、変数減少法 (Backward Elimination Method) と言います [@wang2007determination]。
@@ -34,4 +34,6 @@
 
 ややこしいことに、「ステップワイズ」と言う言葉は、３つ目だけをさして使う人もいれば、１つ目や２つ目にも使う人もいます。
 
-さらには、ラッソ回帰 (Least Absolute Shrinkage and Selection Operator, LASSO) のような新たな手法もあります。LASSO を使った論文としては、糖尿病患者のフレイル予測をした論文があります [＠bu2023development]。
+変数選択法については、R の標準機能に関数があります [@zhang2016variable]。詳細は Chapter \@ref(predictables) で扱います。
+
+さらには、ラッソ回帰 (Least Absolute Shrinkage and Selection Operator, LASSO) のような新たな手法もあります。LASSO を使った論文としては、糖尿病患者のフレイル予測をした論文があります [@bu2023development]。
