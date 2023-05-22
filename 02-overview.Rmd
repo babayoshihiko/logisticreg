@@ -34,6 +34,8 @@
 
 ややこしいことに、「ステップワイズ」と言う言葉は、３つ目だけをさして使う人もいれば、１つ目や２つ目にも使う人もいます。
 
+数を減らす方法には、条件付き法、尤度比法、Wald 法などがあります。
+
 変数選択法については、R の標準機能に関数があります [@zhang2016variable]。詳細は Chapter \@ref(predictables) で扱います。
 
 さらには、ラッソ回帰 (Least Absolute Shrinkage and Selection Operator, LASSO) のような新たな手法もあります。LASSO を使った論文としては、糖尿病患者のフレイル予測をした論文があります [@bu2023development]。
