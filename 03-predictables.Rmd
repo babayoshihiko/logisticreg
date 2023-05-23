@@ -6,7 +6,7 @@
 
 ## 尺度  {#scale}
 
-統計学においては、変数の型は以下の４つに分類することが通常です。
+統計学においては、変数の型は以下の４つの尺度に分類することが通常です。\index{しゃくど@尺度}
 
 * 名義尺度: 数値化されていない変数。例: 性別、都道府県
 * 順序尺度: 順序関係はあるが、数値化されていない変数。例：「頑健、プレフレイル、フレイル」、要介護度
@@ -55,3 +55,5 @@ R では、基本機能として `StepAIC()` 関数があります。また、st
 :::: {.blackbox data-latex=""}
 To identify effective molecular biomarkers for diagnosis of sarcopenia, candidates were selected by searching the relevant literature and subjected to immunochemical analyses using elderly people sera of normal and sarcopenia group that was clinically manifested based on AWGS. We examined 21 biomarker candidates, including proteins related to skeletal muscle function or metabolism and muscle-derived cytokines (myokines), angiotensin-converting enzyme (ACE)$^{19}$, insulin-like growth factor 1 (IGF-1)$^{20}$, procollagen type III N-terminal peptide (P3NP)$^{21}$}, fibroblast growth factor $^{21}$ (FGF21)$^{22}$, myostatin$^{23}$, growth differentiation factor 11 (GDF11)$^{24}$, meteorin-like (METRNL)$^{25}$, macrophage migration inhibitory factor (MIF)$^{26}$, fatty acid binding protein 3 (FABP3)$^{27}$, ciliary neurotrophic factor (CNTF)$^{28}$, secreted protein acidic and rich in cysteine (SPARC)$^{29}$, brain-derived neurotrophic factor (BDNF), tumor necrosis factor-α (TNF-α), interleukin 6 (IL-6), interleukin 8 (IL-8), interleukin 10 (IL-10), interleukin 15 (IL-15), interleukin 1β (IL-1β), monocyte chemotactic Protein 1 (MCP-1), transforming growth factor β 1 (TGFβ1), and vascular endothelial growth factor (VEGF)$^{30}$.
 ::::
+
+なお、この論文では、この後ロジスティック回帰を使ってリスクスコアの計算式を作っています。\index{りすくすこあ@リスクスコア}
