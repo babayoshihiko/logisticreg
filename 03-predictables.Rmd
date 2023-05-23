@@ -4,10 +4,39 @@
 
 それぞれ、少しづつ意味が違うのですが、その違いは分かりづらいです。
 
+## 尺度  {#scale}
+
+統計学においては、変数の型は以下の４つに分類することが通常です。
+
+* 名義尺度: 数値化されていない変数。例: 性別、都道府県
+* 順序尺度: 順序関係はあるが、数値化されていない変数。例：「頑健、プレフレイル、フレイル」、要介護度
+* 間隔尺度: 計測可能な変数ではあるが、0 の扱いが難しい。例：バーセル指数、MMSE
+* 比例尺度: 0からはじまる計測可能な変数。例：身長、年齢
+
+名義尺度は順序尺度は、平均値などの計算はできません。介護などで「施設利用者の要介護度の平均」など便宜上計算されることはありますが、統計的な意味はありません。
+
+ロジスティック回帰の場合、このうち名義尺度と比例尺度を主に用いることになります。
+
+比例尺度であっても、名義尺度のように使うこともできます。例えば、年齢を「65歳以上と65歳未満」の２値変数に分けることは、よくある方法です。
+
 ## 統計的に説明変数を選択
 
 説明変数は、理論的に求められる方が望ましいとされています。
 
 しかし、探索的な研究などでは、まだどの変数が説明変数になりうるか、予想がつかないことがあります。その際は、今ある変数から統計的に変数を見つける方法があります。
+
+### ステップワイズの例
+
+@wang2020association は、嚥下障害のリスク因子をロジスティック回帰で調査しました。この中で、説明変数が相関していることを発見しました。フレイルは、バーセル指数と年齢に相関関係があるため、フレイルを残し、バーセル指数と年齢は独立因子としては採用していません。これを説明している文章は以下の通りです。
+
+:::: {.blackbox data-latex=""}
+The results of Spearman's correlation coefficient showed that there was a significant correlation between frailty and the Barthel Index (r = 0.592, $P$ < 0.0001), and frailty increases with age. Therefore, the Barthel Index and age were not used as independent variates in the subsequent multivariable stepwise regression analyses, and the results indicated pre-frail odds ratio and frail phenotype, history of choking/coughing while drinking were associated with dysphagia with statistical significances (Table 3).
+::::
+
+個々の表現は若干疑問が 2 点残ります。まず、フレイルは「頑健、プレフレイル、フレイル」の３値変数（順序尺度）でバーセル指数は 0 ～ 100 点（間隔尺度？）ですが、どうやら比例尺度として扱って相関係数を求めています^[さらに付け加えるなら、相関係数の値がどの程度なら削除するかの基準が明示されていません。]。もう 1 点は、そもそもですがフレイルは加齢と相関があるのは想定しているはずなので、解析前から検討すべきであるという点です。
+
+このような疑問点は残りますが、ロジスティック回帰の変数の選択の仕方としては参考になります。
+
+### R によるステップワイズ  {#stepwise-r}
 
 R では、基本機能として `StepAIC()` 関数があります。また、stepwiseLogit パッケージの `StepReg()` では、選択基準として AIC のほか、AICc, SBC, IC(1), IC(3/2), HQ, HQc and Significant Levels(SL) を選ぶことができます。
