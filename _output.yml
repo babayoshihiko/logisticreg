@@ -12,7 +12,6 @@ bookdown::epub_book: default
 rmdja::pdf_book_ja:
   keep_tex: true
   keep_md: true
-  extra_dependencies: ["makeidx","colortbl"]
   includes:
     in_header:  preamble.tex
     after_body: after_body.tex
