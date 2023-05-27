@@ -57,6 +57,6 @@ Chapter \@ref(predictables) では説明変数間は基本的に独立した関�
 
 サンプルサイズ 10-samplesize
 
-機械学習 11-machinelearning
+Chapter \@ref(machinelearning)では、機械学習について触れる。
 
 ## 著者について  {- #authors}

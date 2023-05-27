@@ -1,8 +1,32 @@
 # 機械学習  {#machinelearning}
 
-ランダムフォレスト
+機械学習は、データから、「機械」（コンピューター）が自動で「学習」し、データの背景にあるルールやパターンを発見する方法です。
 
-## 計算
+実は、ロジスティック回帰自体も機械学習とみなされています。
 
-あいうえお
+機械学習には、ロジスティック回帰の他にも、以下のような手法があります。
+
+* 決定木 (Decision Tree)
+* ニューラルネットワーク (neural Network)
+* 最近傍 (Nearest Neighbour)
+* ランダムフォレスト (Random Forest)
+* サポートベクトルマシーン (Support Vector Machine, SVM)
+
+もちろん、このほかも多数あり、さらにどんどん新しい手法が開発されています。
+
+## 機械学習との比較
+
+機械学習は、アウトカムの設定が比較的柔軟で、ロジスティック回帰のようなアウトカムを設定することも可能です。
+
+このため、ロジスティック回帰を含めて予測精度の優劣を比較した論文が多く出版されています。予測精度の判定方法には、主に受信者動作特性曲線下領域 (AUROC)、陽性的中率と陰性的中率が指標になります。
+
+フレイルを対象としたものだけでも、ロジスティック回帰と機械学習を比較した論文はたくさん出ています。その一部は、
+
+* @ju2021derivation: 決定木
+* @tarekegn2020predictive: Artificial neural network (ANN), Genetic programming (GP), Support vector machines (SVM), Random Forest (RF) and Decision tree (DT)
+* @da2023machine: Logistic Regression, Random Forest (RF), Support Vector Machine, Neural Network, K-nearest neighbour, and Naive Bayes classifier
+* @wu2022latent: naïve bayes, logistic regression, decision tree, support vector machine, random forest, artificial neural network, and extreme gradient boosting
+* @massaad2021performance: random forest, and gradient-boosted decision tree: なお、ロジスティック回帰は、通常のロジスティック回帰と Lasso Regulation ロジスティック回帰 (Chapter \@ref(finding-independent-significant-variables))。著者らは、ランダムフォレストが最も良かったと主張していますが、AUROC の 95% 信頼区間は、ロジスティック回帰とランダムフォレストは重なっています。
+
+
 
