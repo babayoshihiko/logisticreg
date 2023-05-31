@@ -1,4 +1,4 @@
-bookdown::gitbook:
+rmdja::gitbook_ja:
   css: style.css
   config:
     toc:
