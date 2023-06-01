@@ -1,5 +1,14 @@
 # サンプルサイズ  {#samplesize}
 
+
+```{r include=FALSE}
+library(powerMediation)
+library(powerSurvEpi)
+library(pwrss)
+library(samplesizelogisticcasecontrol)
+library(WebPower)
+```
+
 サンプルサイズ (sample size)\index{さんぷるさいず@サンプルサイズ} とは、研究に用いられる各群の参加者の数です。略して、N や n などということもあります。大文字の N は、全群合わせた総数参加者数で、小文字の n は、各群の参加者数を指すことが多いようです。
 
 日本語では、「サンプル数」と「サンプルサイズ」の誤解がよく見られます。「A群50人、B群50人」の場合、サンプル数は２で、サンプルサイズがそれぞれ50ずつとなります。
@@ -20,6 +29,11 @@
 ## 研究計画
 
 @dasgupta2019frail は、インド西ベンガル州の農村地域の高齢者（60 歳以上）におけるフレイルとその関連要因をロジスティック回帰で分析しています。この研究では、あらかじめ必要なサンプルサイズが計算されています。
+
+:::: {.blackbox data-latex=""}
+Sample size: The sample size was calculated using the formula: $n = (Zα_{/2}) 2 \times p \times q/l2$, where $n = 1.96 \times 1.96 \times 50 \times 50/102 = 10000/100 = 100$ (taking proportion $P$ = 50% and $q$ = 50%, ($100 − p$), allowable error ($l$) =10%, and standard normal deviate $Z$ = 1.96 (for 95% confidence interval). There is no study available in this area regarding proportion of frailty; so, the 50% proportion was taken to calculate the sample size. As multistage sampling was used, design effect of 1.5 was given and total sample size calculated was 1.5 $\times$ 100 = 150. Taking the nonresponse rate as 10%, the final sample size was calculated to be 165.
+::::
+
 
 ## R での計算
 

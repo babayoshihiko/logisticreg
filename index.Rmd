@@ -14,6 +14,7 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
 ```{r index-setup, include = FALSE}
+knitr::opts_chunk$set(warning = FALSE)
 options(kableExtra.latex.load_packages = FALSE)
 library(kableExtra)
 library(tidyverse)
@@ -55,7 +56,7 @@ Chapter \@ref(predictables) では説明変数間は基本的に独立した関�
 
 欠損値の扱い 09-missing
 
-サンプルサイズ 10-samplesize
+Chapter \@(samplesize) では、ロジスティック回帰を行う際のサンプルサイズの計算方法について学びます。
 
 Chapter \@ref(machinelearning)では、機械学習について触れる。
 
