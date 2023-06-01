@@ -21,3 +21,45 @@
 
 @dasgupta2019frail は、インド西ベンガル州の農村地域の高齢者（60 歳以上）におけるフレイルとその関連要因をロジスティック回帰で分析しています。この研究では、あらかじめ必要なサンプルサイズが計算されています。
 
+## R での計算
+
+R において、ロジスティック回帰を行うパッケージは非常にたくさんあります。
+
+* powerMediation
+* powerSurvEpi
+* pwrss: Wald 検定; p0, (p1、odds.ratio または beta1), power
+* samplesizelogisticcasecontrol: スコア検定と Wald 検定
+* WebPower
+
+
+```{r}
+library(powerMediation)
+ssMediation.VSMc.logistic (power = 0.8, b2 = log(2), sigma.m = 0.1, p = 0.1, corr.xm = 0.2)
+```
+
+```{r}
+library(powerSurvEpi)
+powerSurvEpi::powerConLogistic.bin(OR = 2, pE = 0.1, nD = 1, nH = 2, R2 = 0, )
+```
+
+
+
+```{r}
+library(pwrss)
+pwrss.z.logreg(p0 = 0.1, odds.ratio = 2, power = 0.80)
+```
+
+```{r}
+library(samplesizelogisticcasecontrol)
+sampleSize_binary(prev = 0.1, logOR = log(2), probXeq1 = 0.5)
+```
+
+```{r}
+library(WebPower)
+wp.logistic(p0 = 0.15, p1 = 0.1, alpha = 0.05, power = 0.8, family = "normal", parameter = c(0,1))
+```
+
+
+
+
+
