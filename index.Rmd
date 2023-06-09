@@ -61,3 +61,12 @@ Chapter \@(samplesize) では、ロジスティック回帰を行う際のサン
 Chapter \@ref(machinelearning)では、機械学習について触れる。
 
 ## 著者について  {- #authors}
+
+馬場美彦
+
+青木和人
+
+住永みどり
+
+住永実優
+
