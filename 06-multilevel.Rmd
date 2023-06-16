@@ -1,3 +1,4 @@
 # 変数の階層構造  {#multilevel}
 
-## すぅえーでん  {#sample}
+## 個人とクラスター  {#individual-cluster}
+
