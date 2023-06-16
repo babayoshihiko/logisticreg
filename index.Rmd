@@ -19,6 +19,12 @@ options(kableExtra.latex.load_packages = FALSE)
 library(kableExtra)
 library(tidyverse)
 library(epiDisplay)
+library(MatchIt)
+library(powerMediation)
+library(powerSurvEpi)
+library(pwrss)
+library(samplesizelogisticcasecontrol)
+library(WebPower)
 ```
 
 # はじめに  {- #preface}
@@ -58,7 +64,7 @@ Chapter \@ref(predictables) では説明変数間は基本的に独立した関�
 
 Chapter \@(samplesize) では、ロジスティック回帰を行う際のサンプルサイズの計算方法について学びます。
 
-Chapter \@ref(machinelearning)では、機械学習について触れる。
+Chapter \@ref(machinelearning) では、機械学習について触れる。
 
 ## 著者について  {- #authors}
 
