@@ -76,3 +76,5 @@ Chapter \@ref(machinelearning) では、機械学習について触れる。
 
 住永実優
 
+小野寺百合子
+
