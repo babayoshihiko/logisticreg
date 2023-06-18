@@ -28,3 +28,9 @@ The data was a repeated cross-sectional design and structured in three levels; i
 | Level 3 | 保険者 (市町村または東京特別区) |
 | Level 2 | 年度 (2010-11, 2013, 2016) |
 | Level 1 | 個人およびその他の共変量 |
+
+## R でのマルチレベル
+
+* multilevel
+* arm
+* 傾向スコア: multilevelPSA
