@@ -1,4 +1,36 @@
 # 変数の階層構造  {#multilevel}
 
+ここで扱うトピックは、「マルチレベル」(multilevel) や「階層」(hierarchical) といった言葉で説明されます。
+
+
 ## 個人とクラスター  {#individual-cluster}
 
+## ３レベル
+
+@sato2020intensity は、保険者 (insurer、市町村または東京特別区) によるフレイル啓発イベントの開催頻度と、地域在住高齢者のフレイルの発生頻度（尤度）の関連を３レベルで調査しました。解析をマルチレベルにした理由と方法について述べている部分を読んでみましょう。
+
+:::: {.blackbox data-latex=""}
+Considering the heterogeneity of regions covered by insurers, we used multilevel logistic models to evaluate associations between the number of interventions and the likelihood of frailty and pre-frailty.
+::::
+
+まず、マルチレベルにした理由は、保険者の地域の異質性 (heterogeneity) によります。異質性という言葉は聞きなれないかもしれません。異質であるとは、ロジスティック回帰の場合、説明変数にばらつきがみられることを指します。この論文では、イベントの開催回数や社会活動の二つが主要な説明変数、その他の説明変数に教育レベルとソーシャルキャピタルを設定しています。
+
+では、どのようなレベルが設定されているでしょうか。
+
+:::: {.blackbox data-latex=""}
+The data was a repeated cross-sectional design and structured in three levels; individuals at level 1 were nested within the years of investigation at level 2, nested within insurers at level 3. The number of interventions and fixed effects of the years of investigation are variables at level 2; all of the other covariates were measured at level 1.
+::::
+
+調査に用いるデータは、 Japan Gerontological Evaluation Study (JAGES) という日本のさまざまな地域をカバーしているデータで、調査は3回行われています。
+
+| レベル | 共変量 |
+| -- | -- |
+| Level 3 | 保険者 (市町村または東京特別区) |
+| Level 2 | 年度 (2010-11, 2013, 2016) |
+| Level 1 | 個人およびその他の共変量 |
+
+## R でのマルチレベル
+
+* multilevel
+* arm
+* 傾向スコア: multilevelPSA
