@@ -9,7 +9,7 @@
 例えば、以下のようなデータがあったとします。
 
 ```{r echo=FALSE}
-df <- read.table(text = "PatientID, Hight, Weight, Gender
+df <- read.table(text = "PatientID, Height, Weight, Gender
 1,150,42, M
 2,NA, 46, F
 3,162, 82, M
@@ -22,7 +22,7 @@ kbl(df, booktabs = T) %>%
 kable_styling(latex_options = c("striped", "hold_position"))
 ```
 
-５人の身長、体重、性別です。５人分のデータがあるにも関わらず、３つのデータが欠損しているため、２人分しか使うことができません。
+５人の身長、体重、性別です。５人分のデータがあるにも関わらず、PatientID が 2、４、５の３つのデータが一部欠損しているため、２人分しか使うことができません。
 
 ロジスティック回帰の場合には、もっと多くの変数を使うことが多いですが、一つ欠損しているだけで他の変数が使えないのではもったいないです。
 
