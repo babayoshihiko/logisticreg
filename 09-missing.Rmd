@@ -6,6 +6,26 @@
 
 欠損値があるデータを除いて解析する場合、サンプルサイズが小さくなってしまうことと、せっかくあるデータを活用することができないと言う欠点があります。
 
+例えば、以下のようなデータがあったとします。
+
+```{r echo=FALSE}
+df <- read.table(text = "PatientID, Hight, Weight, Gender
+1,150,42, M
+2,NA, 46, F
+3,162, 82, M
+4,164, NA, M
+5,158, 56, ", header = TRUE, colClasses=c("factor", "integer", "integer", "factor"), sep=",")
+```
+```{r echo=FALSE}
+library(kableExtra)
+kbl(df, booktabs = T) %>%
+kable_styling(latex_options = c("striped", "hold_position"))
+```
+
+５人の身長、体重、性別です。５人分のデータがあるにも関わらず、３つのデータが欠損しているため、２人分しか使うことができません。
+
+ロジスティック回帰の場合には、もっと多くの変数を使うことが多いですが、一つ欠損しているだけで他の変数が使えないのではもったいないです。
+
 値を代入する方法には、多重代入法 (Multiple imputation, MI) や full information maximum likelihood (FIML) などがあります。
 
 ## 多重代入法
