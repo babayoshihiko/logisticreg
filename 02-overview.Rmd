@@ -56,9 +56,17 @@
 この目的変数に対し、説明変数としてフレイルの指標である
 Frailty Index (FI)、年齢、性別など多くの変数を挙げています。
 
-FI は、フレイルの指標の一つです。フレイルの指標で最も有名なのは Fried による５項目の簡便なものですが、FI は、
+FI は、フレイルの指標の一つです。フレイルの指標で最も有名なのは Fried による５項目の簡便なものですが、FI は、フレイルに関連しそうな 40 項目前後のチェックリストで構成されています。この研究では 50 項目を使用し、0.25 以上をフレイルと定義しました。
 
+年齢については、数値として扱うのではなく、75-84歳と、85歳以上の二つのグループのカテゴリ変量としました。
 
+主要アウトカムについては、Table 4 に結果があります。結果についての本文は以下のとおりです。
+
+:::: {.blackbox data-latex=""}
+On univariate analysis, an FI of 0.25 or higher was associated with the development of in-hospital complications (P = .01). Age (P = .02), systolic blood pressure (P = .04), heart rate (P = .11), and Injury Severity Score (P = .01) were also associated with the development of in-hospital complications. After adjusting for age, systolic blood pressure, heart rate, and Injury Severity Score in a multivariate regression model, an FI of 0.25 or higher was an independent predictor of the development of in-hospital complications (P = .001). Table 4 summarizes the results of the univariate and multivariate regression analyses for factors associated with in-hospital complications.
+
+After stratifying patients into 3 groups based on age (65-74 years, 75-84 years, and ≥85 years), an FI of 0.25 or higher remained an independent predictor of the development of in-hospital complications in each group. Table 5 summarizes the results of the multivariate regression analysis after stratifying the study population by age.
+::::
 
 ## リスクスコアの開発と検証
 
